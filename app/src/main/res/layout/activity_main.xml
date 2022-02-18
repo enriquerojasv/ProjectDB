@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/first_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/general_margin"
+        android:layout_marginTop="@dimen/general_margin"
+        android:text="@string/create_comment" />
+
+    <EditText
+        android:id="@+id/id_commentary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_text"
+        android:layout_margin="@dimen/general_margin"
+        android:hint="@string/new_commentary_name" />
+
+    <EditText
+        android:id="@+id/text_commentary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_container"
+        android:layout_below="@id/id_commentary"
+        android:layout_margin="@dimen/general_margin"
+        android:hint="@string/new_commentary_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_commentary"
+        android:layout_margin="@dimen/general_margin"
+        android:onClick="addComment"
+        android:text="@string/create_button" />
+
+    <TextView
+        android:id="@+id/second_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_button"
+        android:layout_marginStart="@dimen/general_margin"
+        android:text="@string/select_commentary" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_text"
+        android:layout_alignParentEnd="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/view_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_margin="@dimen/general_margin"
+        android:onClick="showComment"
+        android:text="@string/show_button" />
+
+    <TextView
+        android:id="@+id/third_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_button"
+        android:layout_marginStart="@dimen/general_margin"
+        android:text="@string/show_commentary" />
+
+    <TextView
+        android:id="@+id/commentary_viewer"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/third_text"
+        android:layout_marginStart="@dimen/general_margin"
+        android:layout_marginTop="@dimen/general_margin"
+        android:layout_marginEnd="@dimen/general_margin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentary_viewer"
+        android:layout_margin="@dimen/general_margin"
+        android:onClick="deleteComment"
+        android:text="@string/delete_button" />
+
+</RelativeLayout>
